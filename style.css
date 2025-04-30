@@ -1,0 +1,110 @@
+/* ------------- AULA 7 ----------------- */
+
+/*
+Unidades para ângulos: 
+    deg - grau: um círculo tem 360deg;
+    grad - grado: um círculo tem 400grad;
+    rad - radiano: um círculo tem 2𝛑rad;
+    turn - volta: um círculo tem 1turn;
+
+Unidades de duração:
+    s - segundo: 1s;
+    ms - milissegundo: 1/1000s;
+*/
+
+#grad {
+    background-image: radial-gradient( rgb(232, 192, 255), rgb(252, 161, 214), rgb(162, 227, 247));
+}
+
+div.vazio {
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    position: absolute;
+    left: 200px;
+    top: 150px
+}
+
+div.transform {
+    
+    width: 100px;
+    height: 100px;
+    border: solid 1px black;
+    position: absolute;
+    left: 200px;
+    top: 150px;
+    background-color: lightpink;
+    
+    /*transform: translate(10px, 20px);*/
+    /* transform: rotateX(50deg); */
+    /*transform: translate(10px, 20px);*/
+    /*transform: rotateX(30deg);*/
+    /* transform: scale(2, 1); */
+    /*transform: skew(10deg, 400grad);*/
+    /*transform: skewX(20deg);*/
+    /*transform: skewY(20deg);*/   
+}
+
+/* -------------- TRANSIÇÕES ------------------- */
+
+div.transition {
+    width: 100px;
+    height: 100px;
+    /* propriedade duração */
+    transition: all 2s;
+    background-color: lightseagreen;
+}
+
+div:hover {
+    height: 200px;
+    width: 200px;
+    padding: 20px;
+    background-color: rgb(255, 82, 154)
+}
+
+ /* nao sabo o que faz */
+input:focus {
+    width: 200px;
+    font-size: 24px;
+}
+
+h1 {
+    animation-duration: 2s;
+    animation-name: aparecer;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer {
+   0% {opacity: 0}
+   100% {opacity: 1} 
+}
+
+@keyframes nomeDaAnimacao {
+    0% { propriedade: valorInicial; }
+    50% { propriedade: valorIntermediario; }
+    100% { propriedade: valorFinal; }
+  }
+  
+  /*
+  animation-name: Define o nome da animação que será aplicada ao elemento.
+  
+  animation-duration: Determina a duração da animação em segundos ou milissegundos.
+  
+  animation-timing-function: Especifica a função de temporização da animação, controlando a velocidade da transição ao longo do tempo.
+  (ease, linear, ease-in, ease-out, ease-in-out)
+  
+  animation-delay: Define o atraso antes que a animação comece em segundos ou milissegundos.
+  
+  animation-iteration-count: Indica quantas vezes a animação será repetida.
+  (número inteiro positivo ou infinite)
+  
+  animation-direction: Define a direção da animação, como normal (do início ao fim), reverse (do fim ao início),
+  alternate (cada ciclo alterna a direção), ou alternate-reverse (cada ciclo alterna a direção inicial).
+  
+  animation-fill-mode: Especifica como os estilos são aplicados antes e depois que a animação é executada.
+  none (nenhum preenchimento), forwards (aplica o estado final após a animação), backwards (aplica o estado inicial antes da animação), 
+  ou both (aplica tanto o estado inicial quanto o final).
+  
+  animation-play-state: Define o estado da animação, se está em execução ou pausada.
+  running (em execução) ou paused (pausado).
+  */
