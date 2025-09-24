@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+
+</head>
+<body>
+
+    <div class="p-4 bg-green-300 rounded animate-fade w-20">Fade</div>
+    
+    <button class="animate-wiggle">Treme</button>
+    
+    <div class="animate-wiggle w-40 h-10 bg-cyan-300 rounded-full"></div>
+    
+    <div class="animate-fade w-10 h-10 bg-pink-400 rounded-full"></div>
+    
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem, eveniet quis sint magnam eos facere dolor non molestiae aperiam iusto vero suscipit obcaecati ipsa dignissimos tempore, eligendi neque error tempora aliquid exercitationem dicta recusandae id. Delectus fugiat eos id. Eveniet ducimus voluptatibus error nisi repellat expedita nesciunt molestias officiis accusamus. Molestiae commodi non minima et error odio sit aperiam dolorum rem eaque ipsum velit animi officia, impedit beatae ratione quod? Ipsum autem illum quas, ex harum dolor quod nesciunt at, pariatur, natus error nam tempore itaque reprehenderit temporibus non dolore. Ipsum nulla aliquid, velit corporis voluptatum in praesentium culpa fugiat animi quis ipsam earum vitae maxime assumenda nisi saepe illo delectus eligendi, suscipit voluptate voluptatibus, officia debitis repudiandae! Similique itaque ex beatae consequatur nobis quidem fuga vitae perferendis consequuntur incidunt facilis impedit reiciendis, voluptates inventore ea vel eligendi natus enim! Ratione ex dolore nostrum accusamus blanditiis harum earum veniam suscipit cum quos libero tempora aut, explicabo a sed iusto veritatis repellat cupiditate impedit rerum possimus dicta. Cumque aliquam facilis eveniet ipsum eligendi ipsa velit. Odit sed sit rem similique! Voluptatum adipisci beatae impedit officia soluta sunt at, nostrum, quasi dolore exercitationem animi odit molestiae enim recusandae, porro numquam corporis nihil dicta magnam voluptate laudantium odio. Iste, dignissimos, eaque porro accusantium totam qui, officia fugiat facilis nobis perspiciatis sunt vitae minima et magnam nihil voluptates facere ex sed inventore aliquam recusandae? Odit enim nesciunt quidem soluta neque labore, tempora eum ea explicabo suscipit rem ad libero sint error quasi porro corrupti. Provident nulla expedita repellat autem veritatis consequatur odio deserunt officia voluptatem velit at, explicabo obcaecati perspiciatis numquam. Eum velit veniam voluptatem maxime, consequatur sapiente odit incidunt magnam facere quo consectetur, pariatur eos, nulla cumque quia dolore dolores est cum officia non soluta. Cum libero perspiciatis dolore nostrum qui voluptas hic ad voluptatibus provident minima consequuntur deleniti inventore, debitis assumenda unde explicabo? Quo dolorem deserunt perspiciatis et atque voluptas quos vel quis. Quam laboriosam, aperiam iure cupiditate recusandae optio voluptates a! Ipsa consequuntur officiis eligendi veniam? Sequi nam debitis atque optio dignissimos rerum, numquam molestiae quod ipsam cupiditate porro, accusamus esse temporibus eveniet minus excepturi odit aperiam accusantium ut! Repudiandae obcaecati nihil consequuntur non autem deleniti libero odit dolores magnam asperiores, id excepturi sit corrupti, consequatur quasi. Modi similique, autem ipsam, totam, odit suscipit voluptate sit est non iste animi vel praesentium optio! Quia voluptatem repellat vel a natus quod quae consectetur sint minus ratione, dicta tenetur. Beatae dolore ipsam odio facere earum, sed rerum repudiandae amet porro odit maxime optio a minus voluptas veniam ab, velit modi provident? Quibusdam, maiores, ea eveniet molestiae officia reprehenderit ipsum facere corporis libero commodi quaerat repellat quasi debitis est tenetur amet fuga in aut assumenda sequi perferendis odio. Quod delectus modi minima cum numquam voluptatum asperiores hic, id recusandae totam quos soluta, deleniti nesciunt placeat aperiam officia quo saepe? Ipsam, maiores quis quibusdam tempore quae eum expedita eligendi voluptatum sit praesentium optio odit quod debitis nemo laborum quidem inventore consequatur id ipsa aperiam molestias!</p>
+
+    <div class="opacity-0 transition-opacity duration-700 bg-pink-300 rounded-sm w-40 h-10 " data-observe>
+        Aparece ao rolar!
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus ipsum quis adipisci quasi doloribus commodi a quo, distinctio laudantium corporis molestiae id asperiores excepturi! Quos magnam ratione at, eos praesentium, temporibus qui culpa voluptas labore odio, hic quaerat cupiditate similique nemo quibusdam consequatur dignissimos sequi! Distinctio aperiam ratione, quam qui corporis, reiciendis cumque aliquam voluptatem earum dolore, dolorum voluptates voluptatibus sit necessitatibus in. Eaque non sed deleniti quae obcaecati mollitia unde, corrupti tenetur nemo magni? Eligendi exercitationem, dolore maiores vel vero, asperiores ducimus quasi hic temporibus ullam quas aut voluptatibus veniam cumque. Expedita laboriosam ducimus aspernatur non, hic autem dignissimos eligendi unde voluptatem impedit, deserunt assumenda! Eius nulla totam, consectetur culpa natus recusandae dolorum laudantium error. Voluptatum minus, odio vero magnam unde ab consequuntur assumenda reiciendis? Commodi dolor cum quod aut error minima rem doloribus ipsa nobis. Eligendi a laudantium recusandae ad excepturi fugit. Quo suscipit perspiciatis consequuntur harum vitae repellat rerum similique qui soluta tempore. Facilis illum distinctio natus corrupti esse unde consectetur quis, dolorum nisi sit recusandae cum accusantium minus magni fugit nobis saepe suscipit quae minima beatae, quasi similique autem. Aspernatur quae, debitis quasi accusamus atque amet. Maxime labore voluptatem reiciendis repudiandae nam est aliquam quasi voluptatibus!</p>
+
+
+    <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('opacity-100');
+      }
+    });
+  });
+  document.querySelectorAll('[data-observe]').forEach(el => observer.observe(el));
+</script>
+
+
+</body>
+</html>
